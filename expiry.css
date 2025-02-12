@@ -1,0 +1,98 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f5fff5;
+    color: #333;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background-color: #2c7a2c;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #4caf50;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a.active {
+    background-color: white;
+    color: #4caf50;
+}
+
+/* Expiry Alerts Section */
+.expiry-alerts {
+    padding: 40px;
+}
+
+.expiry-alerts h2 {
+    margin-bottom: 20px;
+    color: #2c7a2c;
+}
+
+/* Alert Box */
+#alerts-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+/* Expiry Notification */
+.alert {
+    background: #ffcccb;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.alert.expiring-soon {
+    background: #ffb6c1; /* Light pink for expiring soon */
+}
+
+.alert.expired {
+    background: #ff4d4d; /* Red for expired items */
+}
+
+/* Subheader */
+.subheader {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
