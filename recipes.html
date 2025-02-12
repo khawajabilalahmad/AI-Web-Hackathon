@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Suggestions</title>
+    <link rel="stylesheet" href="css/recipes.css">
+    <script src="js/recipes.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Intelligent Kitchen Management System</h1>
+    </header>
+    <div class="subheader">
+        <h2>Recipe Suggestions</h2>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="recipes.html" class="active">Recipe Suggestions</a></li>
+            <li><a href="expiry.html">Expiry Alerts</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="recipe-section">
+            <h2>Find Meals Based on Your Ingredients</h2>
+            <input type="text" id="search-bar" placeholder="Search recipes..." onkeyup="filterRecipes()">
+            <button class="fetch-recipes-btn" onclick="getRecipeSuggestions()">Suggest Recipes</button>
+            <div id="recipe-results" class="recipe-container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Intelligent Kitchen Management System</p>
+    </footer>
+</body>
+</html>
