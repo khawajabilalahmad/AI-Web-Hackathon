@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="css/inventory.css">
+    <script src="js/inventory.js" defer></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Intelligent Kitchen Management System</h1>
+    </header>
+
+    <div class="subheader">
+        <h2>Inventory Management</h2>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="inventory.html" class="active">Inventory</a></li>
+            <li><a href="recipes.html">Recipe Suggestions</a></li>
+            <li><a href="expiry.html">Expiry Alerts</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="inventory-section">
+            <h2>Manage Your Pantry</h2>
+
+            <!-- Add Item Button -->
+            <button class="open-modal-btn" onclick="openModal()">+ Add New Item</button>
+
+
+            <!-- Add Item Modal -->
+            <div class="modal" id="itemModal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeModal()">&times;</span>
+                    <h2>Add Item</h2>
+                    <form id="inventory-form">
+                        <label>Item Name:</label>
+                        <input type="text" id="itemName" required>
+
+                        <label>Category:</label>
+                        <select id="itemCategory">
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="Fruits">Fruits</option>
+                            <option value="Dairy">Dairy</option>
+                            <option value="Beverages">Beverages</option>
+                        </select>
+
+                        <label>Quantity:</label>
+                        <input type="number" id="itemQuantity" required>
+
+                        <label>Unit (kg, L, pcs):</label>
+                        <input type="text" id="itemUnit" required>
+
+                        <label>Expiration Date:</label>
+                        <input type="date" id="itemExpiry">
+
+                        <button type="submit">Save Item</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Search & Filter -->
+            <input type="text" id="searchBar" placeholder="Search Items..." onkeyup="searchItems()">
+            
+            <div class="filter">
+                <label>Filter by Category:</label>
+                <select id="categoryFilter" onchange="filterItems()">
+                    <option value="All">All</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Dairy">Dairy</option>
+                    <option value="Beverages">Beverages</option>
+                </select>
+            </div>
+
+            <!-- Expand Inventory Button -->
+            <button class="expand-btn" onclick="toggleInventory()">Show/Hide Inventory</button>
+
+            <!-- Inventory Container (Hidden Initially) -->
+            <div id="inventory-container" style="display: none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Expiry</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventory-list"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Intelligent Kitchen Management System</p>
+    </footer>
+
+</body>
+</html>

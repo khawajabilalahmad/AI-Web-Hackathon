@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Kitchen Management System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Intelligent Kitchen Management System</h1>
+    </header>
+
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="inventory.html">Inventory Management</a></li>
+            <li><a href="recipes.html">Recipe Suggestions</a></li>
+            <li><a href="expiry.html">Expiry Alerts</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with User-Provided Image -->
+    <section class="hero">
+        <img src="kitchen.jpg" alt="Kitchen Image">
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Interactive Boxes as Hyperlinks -->
+            <div class="box" onclick="navigateTo('inventory.html')">
+                <h2>Inventory Management</h2>
+                <p>Manage and track your kitchen inventory efficiently.</p>
+            </div>
+
+            <div class="box" onclick="navigateTo('recipes.html')">
+                <h2>Recipe Suggestions</h2>
+                <p>Get intelligent recipe suggestions based on available ingredients.</p>
+            </div>
+
+            <div class="box" onclick="navigateTo('expiry.html')">
+                <h2>Expiry Alerts</h2>
+                <p>Receive notifications for expiring food items.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Intelligent Kitchen Management System</p>
+    </footer>
+
+</body>
+</html>
